@@ -1,0 +1,1 @@
+console.log("MetroHosting system ready");

@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, Arial;
+}
+
+body {
+    background: #0a1d4d;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    background: #081638;
+    padding: 15px 0;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.panel-btn {
+    background: #ff4500;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    height: 450px;
+    background: url('bg.jpg') center/cover no-repeat;
+}
+.blur {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,60,0.65);
+}
+.hero-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.hero h1 {
+    font-size: 36px;
+}
+.hero p {
+    margin: 12px 0 20px;
+}
+
+/* Layout */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card, .plan {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(6px);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+.price {
+    font-size: 26px;
+    color: #ffd700;
+    margin: 10px 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #ff4500;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #081638;
+    text-align: center;
+    padding: 15px;
+}
