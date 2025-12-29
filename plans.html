@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Hosting Plans</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
+    color: #fff;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.plan {
+    background: linear-gradient(145deg, #1f1f3a, #141428);
+    border-radius: 22px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 1s ease forwards;
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.plan::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    padding: 2px;
+    background: linear-gradient(120deg, #6a5cff, #00ffd5);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: .4;
+}
+
+.plan:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 0 40px rgba(106,92,255,.4);
+}
+
+.plan h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 40px;
+    font-weight: 800;
+    color: #6a5cff;
+}
+.per {
+    font-size: 14px;
+    opacity: .7;
+}
+
+.features {
+    margin-top: 20px;
+}
+
+.features li {
+    list-style: none;
+    margin: 10px 0;
+    position: relative;
+    padding-right: 22px;
+}
+
+.features li::before {
+    content: "✔";
+    position: absolute;
+    right: 0;
+    color: #00ffd5;
+}
+.badge {
+    position: absolute;
+    top: 18px;
+    left: -40px;
+    background: #6a5cff;
+    padding: 6px 50px;
+    transform: rotate(-45deg);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="plans">
+
+    <!-- Stone -->
+    <div class="plan">
+        <h2>🪨 Stone</h2>
+        <div class="price">$2 <span class="per">/ شهري</span></div>
+        <ul class="features">
+            <li>4GB RAM</li>
+            <li>380% CPU</li>
+            <li>NVMe تخزين سريع</li>
+            <li>يدعم Java & Bedrock</li>
+            <li>حماية DDoS</li>
+            <li>لوحة تحكم سهلة</li>
+        </ul>
+    </div>
+    <!-- Iron -->
+    <div class="plan">
+        <span class="badge">POPULAR</span>
+        <h2>⛓ Iron</h2>
+        <div class="price">$4 <span class="per">/ شهري</span></div>
+        <ul class="features">
+            <li>8GB RAM</li>
+            <li>500% CPU</li>
+            <li>NVMe تخزين فائق</li>
+            <li>Java & Bedrock</li>
+            <li>نسخ احتياطي تلقائي</li>
+            <li>دعم فني 24/7</li>
+        </ul>
+    </div>
+
+    <!-- Gold -->
+    <div class="plan">
+        <h2>🥇 Gold</h2>
+        <div class="price">$6 <span class="per">/ شهري</span></div>
+        <ul class="features">
+            <li>12GB RAM</li>
+            <li>650% CPU</li>
+            <li>أداء عالي للسيرفرات الكبيرة</li>
+            <li>Plugins & Mods بدون حدود</li>
+            <li>Anti-Lag System</li>
+        </ul>
+    </div>
+
+    <!-- Diamond -->
+    <div class="plan">
+        <h2>💎 Diamond</h2>
+        <div class="price">$9 <span class="per">/ شهري</span></div>
+        <ul class="features">
+            <li>16GB RAM</li>
+            <li>800% CPU</li>
+            <li>أفضل أداء ممكن</li>
+            <li>أولوية بالدعم</li>
+            <li>Server Optimization</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
